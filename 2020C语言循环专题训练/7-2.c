@@ -7,23 +7,30 @@ int main(){
     int x,y;
     x =a;
     y = b;
-    sum = a%b;
-    if (sum==0)
+    if (b!=0)
     {
         /* code */
-        printf("%d",b);
-    }
-    else
-    {
-        while (sum!=0)//用欧几里得辗转法求最大公因数
+        sum = a%b;
+        if (a==b)
         {
             /* code */
-            a = b;
-            b = sum;
-            sum = a%b;
+            printf("1/1",x,y);
         }
-        printf("%d/%d",x/b,y/b);
+        else
+        {
+            while (sum!=0)//用欧几里得辗转法求最大公因数
+            {
+                /* code */
+                a = b;
+                b = sum;
+                sum = a%b;
+            }
+            printf("%d/%d",x/b,y/b);
+        }
     }
+    
+ 
+
     
     
     
