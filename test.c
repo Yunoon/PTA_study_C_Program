@@ -3,32 +3,24 @@ int main(){
 	
 
 	int a,b,sum;
-	while (1)
+
+    scanf("%d",&a);
+    if (a==1)
     {
         /* code */
-        scanf("%d",&a);
-        if (a<=0)
-        {
-            /* code */
-            break;
-        }
-        else
-        {
-            if (a%2==1)
-            {
-                /* code */
-                sum+=a;
-            }
-            else
-            {
-                continue;
-            }
-               
-        }
-        
+        printf("0");
+    }
+    if (a==2)
+    {
+        /* code */
+        printf("1");
+    }
+    for (int i = 2; i < a; i++)
+    {
+        /* code */
         
     }
-    printf("%d",sum);    
+    
     
 
 
