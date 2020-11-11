@@ -4,28 +4,29 @@ int main()
 	int i,j,count=1,max=1;
 
 	scanf("%d",&max);
-	for (i = 3; i < 100; i+=3)
+	
+	for (int i = 1;i*3<max; i++)
 	{
 		/* code */
-		for (j = 1; j < 100; j++)
+		for (int j = 1;j*2<max; j++)
 		{
 			/* code */
-			if (i/3+j*3+(100-i-j)*5==100 && 100-i-j>0)
+			for (int k = 1;k<max; k++)
 			{
 				/* code */
-				if (count<=max)
+				if (i*3+j*2+k==max)
 				{
 					/* code */
-					printf("%d %d %d\n",(100-i-j),j,i);
-					count++;
-				}			
-					
-			}		
+					printf("cattle=%d,pig=%d,vegetable=%d\n",i,j,k);
+				}
 				
-		}
+			}
 			
-
+		}
+		
 	}
-    
+	
+
+
 	return 0;
 }
