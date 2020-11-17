@@ -1,13 +1,19 @@
 #include <stdio.h>
 
+/*
+噢噢噢噢，终于把这道题凹过去了
+分享一下这道题的经验：
+这里定义了3个函数分别为：paixu(排序)、bujige(不及格)、zuizhi(最值)
+分别对应了三行的输出
+具体看函数内的注解
+*/
 
-
-int zuizhi(int a[20],int i)
+int zuizhi(int a[20],int i)//判断最值
 {
-    int max=a[0],min=a[0];
+    int max=a[0],min=a[0];//预先给最值赋值为0
     for (int j = 0; j < i; j++)
     {
-        if (a[j+1]>a[j])
+        if (a[j+1]>a[j])//当后数大于前数是给最值赋值为后数
         {
             /* code */
             max = a[j+1];
@@ -23,7 +29,7 @@ int zuizhi(int a[20],int i)
     printf("%d %d\n",max,min);
 }
 
-int bujige(int a[20],int i)
+int bujige(int a[20],int i)//判断是否及格
 {
     int count=0;
     for (int j = 0; j < i; j++)
@@ -74,19 +80,19 @@ int paixu(int a[20],int i)//运用直接插入排序
 
 int main()
 {  
-    int a[20];
+    int a[20];//定义数组
     int i;
     
-    for (i = 0; i <= 10; i++)
+    for (i = 0; i <= 10; i++)//输入10个数
     {
         /* code */
         scanf("%d",&a[i]);
-        if (i>=10 || a[i]<0)
+        if (i>=10 || a[i]<0)//当输入的数的个数大于10，或输入值小于0
         {
             /* code */
             break;
         }
-        else if (a[i]>100)
+        else if (a[i]>100)//当输入的数大于100跳过
         {
             /* code */
             scanf("%d",&a[i]);
@@ -95,7 +101,7 @@ int main()
         
         // printf("%d ",a[i]);
     }
-    paixu(a,i);
+    paixu(a,i);//分别调用3个函数
     bujige(a,i); 
     zuizhi(a,i-1);
 
