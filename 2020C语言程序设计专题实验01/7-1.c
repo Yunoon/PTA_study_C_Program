@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+/*简单记数*/
 
 int main(){
     int n=0;
