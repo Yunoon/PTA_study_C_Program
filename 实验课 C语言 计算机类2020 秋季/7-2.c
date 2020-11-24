@@ -6,6 +6,7 @@
 这里定义了3个函数分别为：paixu(排序)、bujige(不及格)、zuizhi(最值)
 分别对应了三行的输出
 具体看函数内的注解
+更新了zuizhi的判断
 */
 
 int zuizhi(int a[20],int i)//判断最值
