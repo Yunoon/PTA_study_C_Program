@@ -19,7 +19,7 @@ int zuizhi(int a[20],int i)//判断最值
             /* code */
             max = a[j+1];
         }
-        if (a[j+1]<min)
+        if (a[j+1]<min)//当后数小于前数是给最值赋值为后数
         {
             /* code */
             min = a[j+1];
