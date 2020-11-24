@@ -13,12 +13,12 @@ int zuizhi(int a[20],int i)//判断最值
     int max=a[0],min=a[0];//预先给最值赋值为0
     for (int j = 0; j < i; j++)
     {
-        if (a[j+1]>a[j])//当后数大于前数是给最值赋值为后数
+        if (a[j+1]>max)//当后数大于前数是给最值赋值为后数
         {
             /* code */
             max = a[j+1];
         }
-        if (a[j+1]<a[j])
+        if (a[j+1]<min)
         {
             /* code */
             min = a[j+1];
