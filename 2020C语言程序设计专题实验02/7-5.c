@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+/*简单循环，调用sqrt求值*/
 int main()
 {
     int a,b=1;
