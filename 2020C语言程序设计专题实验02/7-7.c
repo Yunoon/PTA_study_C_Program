@@ -1,50 +1,58 @@
 #include <stdio.h>
-#include <math.h>
-
-int zuizhi(int a[20000],int i,int sum)//判断最值
-{
-    int max=a[0],min=a[0];//预先给最值赋值为0
-    float pj=0;
-    for (int j = 0; j < i; j++)
-    {
-        if (a[j+1]>max)//当后数大于max是给最值赋值为后数
-        {
-            /* code */
-            max = a[j+1];
-        }
-        if (a[j+1]<min)//当后数小于max是给最值赋值为后数
-        {
-            /* code */
-            min = a[j+1];
-        }
-        
-        
-    }
-    // printf("1 %d\n",sum);
-    sum = sum-max-min;
-    // printf("%d %d\n",max,min);
-    // printf("2 %d\n",sum);
-    pj = (1.0*sum)/(i-1);
-    printf("%.1f",pj);
-    
-}
+/*
+做法有很多种，如果看不懂这种可以在草稿纸上演练一下
 
 
-
+*/
 int main()
 {
-    int a[20000];
-    int n;
-    int i,sum=0;
-    scanf("%d",&n);
-    
-    for (i = 0; i < n; i++)
+    int a=0,b=0,num;
+
+    scanf("%d",&num);
+    a = (num+1)/2;//找出中间值
+    for (int i = 1; i <= num; i++)//第一层循环7次
     {
         /* code */
-        scanf("%d",&a[i]);
-        sum += a[i];
+        if (i<=a)
+        {
+            /* code */
+            for (int k = 0; k < num-(2*i-1); k++)//在总层数-每层需要的*个数
+            {
+                /* code */
+                printf(" ");
+            }
+            
+            for (int j = 0; j < (2*i-1); j++)//找出每层需要的*个数
+            {
+                /* code */
+                printf("* ");
+            }
+            
+        }
+        else if (i>a)
+        {
+            /* code */
+            int c=0;
+            c = a-(i%a);//大于情况则把中间值-余数
+            for (int k = 0; k < num-(2*c-1); k++)//在总层数-每层需要的*个数
+            {
+                /* code */
+                printf(" ");
+            }
+            for (int j = 0; j < (2*c-1); j++)//找出每层需要的*个数
+            {
+                /* code */
+                printf("* ");
+            }
+            
+        }
+        
+
+        printf("\n");
     }
-    zuizhi(a,i-1,sum);
-    
+    // printf("%d",a);    
+
+
+
     
 }
