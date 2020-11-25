@@ -31,15 +31,7 @@ int main()
     for (int i = a; i <= b; i++)
     {
         /* code */
-        // if (pd(i))
-        // {
-        //     /* code */
-        //     sum += i;
-        // }
-        j = a%10;
-        a /= 10;
-        k = a%10;
-        if (j < k)
+        if (pd(i))
         {
             /* code */
             sum += i;

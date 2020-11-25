@@ -1,54 +1,45 @@
 #include <stdio.h>
+/*用了自定义函数
+
+*/
+
+int pd(int a)//简单的取余，取值,前面写过这个取数逻辑的
+{//核心是 temp=a%10,a/=10
+    int j,k;
+    j = a%10;
+    a /= 10;
+    k = a%10;
+    if (j < k)
+    {
+        /* code */
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+    
+    
+}
 
 int main()
 {
-    int a=0,b=0,num;
-
-    scanf("%d",&num);
-    a = (num+1)/2;
-    for (int i = 1; i <= num; i++)
+    int a=0,b=0;
+    int sum=0;
+    int j,k;
+    scanf("%d %d",&a,&b);
+    for (int i = a; i <= b; i++)
     {
         /* code */
-        if (i<=a)
+        if (pd(i))
         {
             /* code */
-            for (int k = 0; k < num-(2*i-1); k++)
-            {
-                /* code */
-                printf(" ");
-            }
-            
-            for (int j = 0; j < (2*i-1); j++)
-            {
-                /* code */
-                printf("* ");
-            }
-            
-        }
-        else if (i>a)
-        {
-            /* code */
-            int c=0;
-            c = a-(i%a);
-            for (int k = 0; k < num-(2*c-1); k++)
-            {
-                /* code */
-                printf(" ");
-            }
-            for (int j = 0; j < (2*c-1); j++)
-            {
-                /* code */
-                printf("* ");
-            }
-            
+            sum += i;
         }
         
-
-        printf("\n");
+            
+            
     }
-    // printf("%d",a);    
-
-
-
+    printf("%d",sum);
     
 }
