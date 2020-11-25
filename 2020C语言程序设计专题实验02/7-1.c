@@ -26,17 +26,27 @@ int main()
 {
     int a=0,b=0;
     int sum=0;
+    int j,k;
     scanf("%d %d",&a,&b);
     for (int i = a; i <= b; i++)
     {
         /* code */
-        if (pd(i))
+        // if (pd(i))
+        // {
+        //     /* code */
+        //     sum += i;
+        // }
+        j = a%10;
+        a /= 10;
+        k = a%10;
+        if (j < k)
         {
             /* code */
             sum += i;
         }
         
-        
+            
+            
     }
     printf("%d",sum);
     
