@@ -11,13 +11,14 @@ int main()
         for (int i = 2; i < n; i++)
         {
             /* code */
-            a[i] = a[i-1]+a[i-2];//
+            a[i] = a[i-1]+a[i-2];//核心做法依旧还是这里
+            //将当前值赋值为前两个值之和
         }
         for (int i = 0; i < n; i++)
         {
             /* code */
             printf("%11d",a[i]);
-            if ((i+1)%5==0)
+            if ((i+1)%5==0)//当每行有5个数时换行
             {
                 /* code */
                 printf("\n");
