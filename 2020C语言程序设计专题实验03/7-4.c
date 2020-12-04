@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
-/*开始被卡了一分，百度发现是不能用数组的问题*/
+/*一步一步来，先筛选出最大值作比较，用count来进行最终判断*/
 
 int main()
 {
@@ -50,12 +50,5 @@ int main()
         printf("Warning: please check all the tires!");
     }
     
-    
-    
-    
-    
-
-
-
     return 0;
 }
