@@ -22,51 +22,19 @@ int isprime(int n)
     return ret;
 }
 
-
 int fd(int a)
 {   
     int count_i=0,count_j=0;
 
-    for (int i = 1; i < 10000000; i++)
+    for (int i = 1; i < 10000000; i++)//这里需要将范围调大一点
     {
         /* code */
         if (isprime(a+i) && isprime(a+i+2))
         {
-            /* code */
-            // count_i = i;
             printf("%d %d\n",a+i,a+i+2);
             break;
         }
-    }
-    // for (int j = 0; j < 100; j++)
-    // {
-    //     /* code */
-    //     if (isprime(a-j))
-    //     {
-    //         /* code */
-    //         count_j = j;
-    //         break;
-    //     }
-        
-    // }
-    // if (count_i > count_j)
-    // {
-    //     /* code */
-    //     printf("%d %d",a-count_j-2,a-count_j);
-    // }
-    // else if (count_i < count_j)
-    // {
-    //     /* code */
-    //     printf("%d %d",a+count_i,a+count_i+2);
-    // }
-    // else if (count_i == count_j)
-    // {
-    //     /* code */
-    //     printf("%d %d",a-count_j,a+count_j);
-    // }
-    
-    
-    
+    }   
 }
 
 int main()
