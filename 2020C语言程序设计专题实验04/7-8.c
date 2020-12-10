@@ -13,7 +13,7 @@ int main()
         /* code */
         scanf("%d",&a[i]);
     }
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10; i++)//第一次取出最大值
     {
         /* code */
         if (a[i] > max)
@@ -23,7 +23,7 @@ int main()
         }
         
     }
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10; i++)//第二次取出小于最大值的次最大值
     {
         /* code */
         if ((a[i]> cmax) && a[i]<max)
