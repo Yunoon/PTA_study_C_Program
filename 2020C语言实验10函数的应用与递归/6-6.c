@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+
+/*凡人理解迭代，神理解递归，不要理解，直接学着用就好*/
+
 int sum( int n );
 
 int main()
