@@ -1,84 +1,43 @@
 #include<stdio.h>
+#include <math.h>
+
+// char *biao[]={"ling","yi","er","san","si","wu","liu","qi","ba","jiu"};
+// void py(n)
+// {   
+//     int temp=n;
+//     int a[1000000],l;
+//     for (l = 0;temp>0; l++)
+//     {
+//         temp /=10;
+//     }
+//     temp =n;
+//     for (int i = l-1;i>=0; i--)
+//     {
+//         /* code */
+//         a[i]=temp % 10;
+//         temp /=10;
+//     }
+//     printf("%s",biao[a[0]]);
+//     for (int i = 1; i < l; i++)
+//     {
+//         /* code */
+//         printf(" %s",biao[a[i]]);
+//     }
+    
+    
+    
+// }
 
 int main()
-{
-    int n;
-    scanf("%d",&n);
-    int c=1;
-    int x=0,y=0,k=0;
-    int a[n+1][n+1];
-    while(k<n-1)
-    {
-        if(k<n-1)//前下
-        {
-            a[x][++y]=++c;
-            while(y!=0)
-            {
-                a[++x][--y]=++c;
-            }
-            ++k;
-        }
-        if(k<n-1)//前上
-        {
-            a[++x][y]=++c;
-            while(x!=0)
-            {
-                a[--x][++y]=++c;
-            }
-            ++k;
-        }
-    }
+{   
+    char n[1000000];
 
-    if(x==0)
-    {
-        while(k<2*n-3)
-        {
-            if(k<2*n-3)
-            {
-                a[++x][y]=++c;
-                while(x<n-1)
-                    a[++x][--y]=++c;
-                ++k;
-            }
-            if(k<2*n-3)
-            {
-                a[x][++y]=++c;
-                while(y<n-1)
-                    a[--x][++y]=++c;
-                ++k;
-            }
-        }
-    }
-     if(y==0)
-    {
-        while(k<2*n-3)
-        {
-            if(k<2*n-3)
-            {
-                a[x][++y]=++c;
-                while(y<n-1)
-                    a[--x][++y]=++c;
-                ++k;
-            }
-            if(k<2*n-3)
-            {
-                a[++x][y]=++c;
-                while(x<n-1)
-                    a[++x][--y]=++c;
-                ++k;
-            }
-        }
-    }
+    
+    gets(n);
+    
+    printf("%s",n);
+    
+    
 
-
-
-    a[0][0]=1;
-    a[n-1][n-1]=n*n;
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n;j++)
-            printf("%4d",a[i][j]);
-        printf("\n");
-    }
     return 0;
 }

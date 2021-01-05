@@ -1,31 +1,61 @@
 #include <stdio.h>
 #include <math.h>
-#define PI 3.14
 
-
-int fact(i)
-{
-	if (i==1)
-	{
-		/* code */
-		return 1;
-	}
-	else
-	{
-		return fact(i) + fact(i-1);
-	}
-	
-}
 
 
 int main()
 {
-	int a;
+	int n;
+	int x=0,y=0,c=1;
+	int a[5][5]={0};
+	scanf("%d",&n);
+	int frezz=1;
+	int zhuan=0;
+	a[x][y]=1;
+	while (n == c)
+	{
+		/* code */
+		while (y+1 <n  &&a[x][y+1]==0 && frezz)
+		{
+			/* code */
+			a[x][++y]=++c;
+			frezz=0;
+		}
+		
+		while (a[x+1][y-1]==0 && y)
+		{
+			/* code */
+			a[++x][--y]=++c;
+			frezz=1;
+		}
+		while (x+1 < n && a[x+1][y]==0 && frezz)
+		{
+			/* code */
+			a[++x][y]=++c;
+			frezz=0;
+		}
+		
+		while (a[x-1][y+1]==0 && x)
+		{
+			/* code */
+			a[--x][++y]=++c;
+			frezz=1;
+		}
 
-	scanf("%d",&a);
-	printf("area=%d",fact(a));
+		//------------------------
+		
+	}
+	
+	for (int i = 0; i < n; i++)
+	{
+		/* code */
+		for (int j = 0; j < n; j++)
+		{
+			/* code */
+			printf("%4d",a[i][j]);
+		}
+		printf("\n");
+	}
+	
 	return 0;
 }
-
-
-/* 请在这里填写答案 */
