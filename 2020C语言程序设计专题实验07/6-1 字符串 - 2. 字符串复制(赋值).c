@@ -16,19 +16,19 @@ int main()
 
 /* 你提交的代码将被嵌在这里 */
 //方法一
-// char* StrCpy(char *dst, const char *src)
-// {   
-//     int i=0;
-//     char *t=src;
-//     char *m=src;
-//     for (i = 0; *m != '\0'; i++,m++)
-//     for (int g = 0; g<i; g++,src++,dst++)
-//     {
+char* StrCpy(char *dst, const char *src)
+{   
+    int i=0;
+    char *t=src;
+    char *m=src;
+    for (i = 0; *m != '\0'; i++,m++)
+    for (int g = 0; g<i; g++,src++,dst++)
+    {
 
-//         *dst = *src;
-//     }
-//     return t;
-// }
+        *dst = *src;
+    }
+    return t;
+}
 //方法二
 // char* StrCpy(char *dst, const char *src)
 // {
