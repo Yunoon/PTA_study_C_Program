@@ -24,7 +24,9 @@ int main(void)
         /* code */
         printf(" %d",b[i]);
     }
-
+    
+    
+    
     return 0;
 
 
